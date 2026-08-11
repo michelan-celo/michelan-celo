@@ -4,7 +4,7 @@
 -->
 
 <p align="center">
-  <img src="assets/mission-banner.png" width="100%" alt="A cinematic spacecraft orbiting above a blue planet">
+  <img src="mission-banner.png" width="100%" alt="A cinematic spacecraft orbiting above a blue planet">
 </p>
 
 <div align="center">
