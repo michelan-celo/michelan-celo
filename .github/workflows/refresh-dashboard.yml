@@ -1,0 +1,38 @@
+name: Refresh mission console
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "3/5 * * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-dashboard-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@v6
+
+      - name: Install image build dependencies
+        run: python3 -m pip install --disable-pip-version-check Pillow CairoSVG
+
+      - name: Refresh live contributions, music, and quote
+        run: python3 scripts/update_dashboard.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_LOGIN: michelan-celo
+          REFRESH_NONCE: ${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: Commit refreshed dashboard
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets/*.svg assets/profile-console.webp assets/profile-console-poster.png data/current-selection.json
+          git diff --cached --quiet || git commit -m "chore: refresh mission console"
+          git push
