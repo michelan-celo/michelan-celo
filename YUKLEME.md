@@ -10,6 +10,7 @@ Klasörün kendisini değil, içindeki bütün dosya ve klasörleri
 - `scripts/`
 - `README.md`
 - `KURULUM.md`
+- `ANIMASYON.md`
 - `YUKLEME.md`
 
 GitHub yükleme ekranında **Replace files** seçeneğini kabul et. Eski
@@ -21,7 +22,8 @@ Doğru yüklemeden sonra depo kökünde doğrudan `README.md` ve `assets` görü
 oluşmamalıdır.
 
 İlk yüklemeden sonra **Actions → Refresh mission console → Run workflow**
-adımını bir kez çalıştır. Gerekirse **Settings → Actions → General → Workflow
+adımını bir kez çalıştır. Otomatik yenileme günde bir kez çalışır; profil
+ziyaretçiler için yalnızca hazırlanmış WebP dosyasını yüklediğinden daha hafiftir. Gerekirse **Settings → Actions → General → Workflow
 permissions → Read and write permissions** seçeneğini etkinleştir.
 
 Profil sayfasını kontrol ederken `Ctrl + F5` kullan. README yalnızca

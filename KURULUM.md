@@ -43,7 +43,9 @@ profile-space-mission/
 │   ├── build_background.py
 │   ├── build_profile_animation.py
 │   └── update_dashboard.py
+├── ANIMASYON.md
 ├── KURULUM.md
+├── YUKLEME.md
 └── README.md
 ```
 
@@ -86,8 +88,8 @@ günceller. Son seçim `data/current-selection.json` içinde tutulduğu için ar
 arkaya aynı şarkı veya aynı söz gelmez. **Run workflow** düğmesine her basışında
 yeni bir seçim yapılır.
 
-İş akışı GitHub'ın izin verdiği en kısa zamanlama olan en fazla her 5 dakikada
-bir otomatik çalışır. GitHub README sayfa ziyaretinde kod çalıştıramadığı için
+İş akışı her gün bir kez otomatik çalışır. İstersen **Run workflow** düğmesiyle
+istediğin anda elle yenileyebilirsin. GitHub README sayfa ziyaretinde kod çalıştıramadığı için
 seçim tarayıcıdaki her F5 işleminde değil, bu iş akışı çalıştığında değişir.
 GitHub yoğunluğuna bağlı olarak zamanlanmış çalışmalarda gecikme olabilir.
 Yeni çalışmada katkı paneli GitHub GraphQL API verisinden baştan üretilir; API
@@ -109,12 +111,16 @@ yeniden çalıştır.
 
 ## Animasyon davranışı
 
-Her uydu GIF'i yaklaşık 12 saniyelik kesintisiz bir döngüdür:
+Her uydu GIF'i 60 karelik, 12 saniyelik kesintisiz bir döngüdür:
 
-- yaklaşık 6 saniye normal malzeme,
-- aynı kamera açısında ani hologram geçişi,
-- yaklaşık 6 saniye hologram malzemesi,
-- başlangıç pozuna kesintisiz dönüş.
+- normal görünümde 6 saniyede tam 360 derece dönüş,
+- aynı konum ve eksende holograma geçiş,
+- hologram görünümünde 6 saniyede tam 360 derece dönüş,
+- birkaç derecelik yavaş ve dikişsiz eksen kayması.
+
+İki uydu farklı eksen yolları izler. GitHub profil README dosyası JavaScript
+çalıştırmadığından ziyaretçi başına rastgele veya fareyle etkileşimli eksen
+seçimi yapılamaz; ayrıntılı teknik not `ANIMASYON.md` içindedir.
 
 Uydu animasyonlarında ayrı kart çerçevesi, Ay veya yörünge çizgisi yoktur.
 İki uydu da profilin ortak Dünya arka planındaki kendi bölümünde döner.

@@ -16,9 +16,9 @@ POSTER = ASSETS / "profile-console-poster.png"
 WIDTH = 1280
 HEIGHT = 1348
 BACKGROUND_DARKEN_ALPHA = 58
-FRAME_COUNT = 40
-FRAME_DURATION_MS = 300
-WEBP_QUALITY = 48
+FRAME_COUNT = 60
+FRAME_DURATION_MS = 200
+WEBP_QUALITY = 44
 
 PANELS = (
     ("profile-header.svg", (0, 0), (1280, 250)),
@@ -152,8 +152,8 @@ def main() -> None:
         duration=FRAME_DURATION_MS,
         loop=0,
         quality=WEBP_QUALITY,
-        method=0,
-        minimize_size=False,
+        method=4,
+        minimize_size=True,
     )
     print(
         f"Saved {len(composed)}-frame seamless profile animation to {OUTPUT} "

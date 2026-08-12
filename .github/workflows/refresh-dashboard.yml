@@ -3,7 +3,7 @@ name: Refresh mission console
 on:
   workflow_dispatch:
   schedule:
-    - cron: "3/5 * * * *"
+    - cron: "17 4 * * *"
 
 permissions:
   contents: write
