@@ -458,8 +458,8 @@ def wrap_quote(value: str, max_characters: int = 62) -> list[str]:
 def quote_card(item: dict) -> str:
     lines = wrap_quote(item["quote"])
     font_size = 17 if len(lines) == 1 else 14 if len(lines) == 2 else 12
-    line_height = 21 if len(lines) <= 2 else 17
-    start_y = {1: 72, 2: 58, 3: 49, 4: 42}.get(len(lines), 42)
+    line_height = 20 if len(lines) <= 2 else 16
+    start_y = {1: 65, 2: 50, 3: 42, 4: 36}.get(len(lines), 36)
     text_lines = "".join(
         f'<text x="34" y="{start_y + index * line_height}" fill="{TEXT}" font-family="Georgia,Times New Roman,serif" font-size="{font_size}" font-style="italic" font-weight="500">{esc(line)}</text>'
         for index, line in enumerate(lines)
@@ -467,8 +467,8 @@ def quote_card(item: dict) -> str:
     body = f'''
   <circle cx="37" cy="22" r="3" fill="{CYAN}"/>
   <text x="48" y="26" fill="{MUTED}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="9" letter-spacing="1.4">FIELD NOTE / RANDOM SIGNAL</text>
-  <text x="606" y="26" text-anchor="end" fill="{BLUE}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="10" font-weight="650" letter-spacing="1">{esc(item['author'].upper())}</text>
   {text_lines}
+  <text x="606" y="105" text-anchor="end" fill="{BLUE}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="10" font-weight="650" letter-spacing="1">— {esc(item['author'].upper())}</text>
 '''
     return svg_document(640, 118, body, "quote-card")
 
