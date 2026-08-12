@@ -113,14 +113,27 @@ yeniden çalıştır.
 
 Her uydu GIF'i 60 karelik, 12 saniyelik kesintisiz bir döngüdür:
 
-- normal görünümde 6 saniyede tam 360 derece dönüş,
-- aynı konum ve eksende holograma geçiş,
-- hologram görünümünde 6 saniyede tam 360 derece dönüş,
-- birkaç derecelik yavaş ve dikişsiz eksen kayması.
+- ilk 6 saniye normal görünüm,
+- aynı tutumda hologram geçişi,
+- ikinci 6 saniye hologram görünümü,
+- X, Y ve Z üzerinde ayrı ayrı tam 360 derece birikimli dönüş.
 
 İki uydu farklı eksen yolları izler. GitHub profil README dosyası JavaScript
 çalıştırmadığından ziyaretçi başına rastgele veya fareyle etkileşimli eksen
 seçimi yapılamaz; ayrıntılı teknik not `ANIMASYON.md` içindedir.
+
+Son sürümde dönüş ekseni ileri-geri salınmaz. Her uydunun X, Y ve Z açısı
+tek yönde birikir ve 12 saniyede her eksende tam 360 derece tamamlar. Başlangıç
+yönleri ve dönüş işaretleri iki uydu için farklıdır; son kare başlangıç
+tutumuna döndüğü için döngü kesintisizdir.
+
+## Bağlantılar
+
+Ana profil animasyonu bağlantısızdır. GitHub tek bir raster görsel üzerinde
+koordinat tabanlı tıklama alanlarını desteklemediğinden yalnızca animasyonun
+altındaki `COLLABORATE ↗` metni LinkedIn'e, seçili şarkının adı ise YouTube
+Music'e bağlanır. Profilin başka hiçbir bölümü bağlantı açmaz. İş akışı şarkıyı
+değiştirdiğinde `README.md` içindeki şarkı bağlantısını da birlikte yeniler.
 
 Uydu animasyonlarında ayrı kart çerçevesi, Ay veya yörünge çizgisi yoktur.
 İki uydu da profilin ortak Dünya arka planındaki kendi bölümünde döner.

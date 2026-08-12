@@ -23,6 +23,7 @@ SELECTION_STATE = ROOT / "data" / "current-selection.json"
 README = ROOT / "README.md"
 PROFILE_ANIMATION = ASSETS / "profile-console.webp"
 LOGIN = os.environ.get("GITHUB_LOGIN", "michelan-celo")
+LINKEDIN_URL = "https://www.linkedin.com/in/celalgunduz/"
 
 BACKGROUND = "#0d1117"
 TEXT = "#e6edf3"
@@ -511,12 +512,31 @@ def choose_quote(exclude_key: str | None = None) -> dict:
     return refresh_randomizer("quote").choice(candidates or quotes)
 
 
+def write_readme(track: dict) -> None:
+    README.write_text(
+        f'''<!-- Space mission console for github.com/{LOGIN} -->
+
+<p align="center">
+  <img src="assets/profile-console.webp" width="100%" alt="Celal Gündüz — animated space engineering profile console">
+</p>
+
+<p align="center">
+  <a href="{LINKEDIN_URL}"><strong>COLLABORATE ↗</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="{esc(track['url'])}"><strong>♫ {esc(track['title'])} ↗</strong></a>
+</p>
+''',
+        encoding="utf-8",
+    )
+
+
 def write_music_and_quote() -> None:
     state = load_selection_state()
     track = choose_music(state.get("music_url"))
     quote = choose_quote(state.get("quote_key"))
     (ASSETS / "song-1.svg").write_text(music_card(track, 1), encoding="utf-8")
     (ASSETS / "quote-card.svg").write_text(quote_card(quote), encoding="utf-8")
+    write_readme(track)
     SELECTION_STATE.write_text(
         json.dumps(
             {"music_url": track["url"], "quote_key": quote_key(quote)},

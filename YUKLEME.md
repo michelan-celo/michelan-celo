@@ -26,6 +26,7 @@ adımını bir kez çalıştır. Otomatik yenileme günde bir kez çalışır; p
 ziyaretçiler için yalnızca hazırlanmış WebP dosyasını yüklediğinden daha hafiftir. Gerekirse **Settings → Actions → General → Workflow
 permissions → Read and write permissions** seçeneğini etkinleştir.
 
-Profil sayfasını kontrol ederken `Ctrl + F5` kullan. README yalnızca
-`assets/profile-console.webp` dosyasını gösterir; bu tek dosya hareketli arka
-planı, iki uyduyu ve bütün panelleri içerdiği için birleşim çizgisi oluşmaz.
+Profil sayfasını kontrol ederken `Ctrl + F5` kullan. README, hareketli arka
+planı, iki uyduyu ve bütün panelleri tek `assets/profile-console.webp` dosyası
+olarak gösterir; böylece birleşim çizgisi oluşmaz. Ana görsel bağlantısızdır.
+Altındaki `COLLABORATE ↗` ve seçili şarkı adı iki ayrı bağlantıdır.

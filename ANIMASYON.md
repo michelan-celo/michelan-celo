@@ -2,13 +2,13 @@
 
 Profildeki iki uydu aynı 12 saniyelik döngüyü kullanır:
 
-1. Normal görünümde 6 saniyede tam 360 derece döner.
-2. Konumu ve ekseni değişmeden hologram görünümüne geçer.
-3. Hologram görünümünde 6 saniyede bir tam tur daha döner.
-4. Dönüş ekseni, tur boyunca birkaç derece yavaşça kayar.
-5. Son kare başlangıç eksenine yumuşak biçimde döner ve animasyon kesintisiz tekrarlar.
+1. X, Y ve Z açılarına farklı yönlerde sabit açısal hız atanır.
+2. Açılar ileri-geri salınmadan kareden kareye birikir.
+3. Normal görünüm 6 saniye sürer ve aynı pozda holograma geçer.
+4. On ikinci saniyede her eksen toplam tam 360 derece tamamlamış olur.
+5. Son tutum başlangıç tutumuyla aynı olduğu için animasyon kesintisiz tekrarlar.
 
-Animasyon 60 kare ve kare başına 200 ms kullanır. İki uydu için farklı,
-önceden belirlenmiş eksen yolları vardır. GitHub profil README dosyaları
-JavaScript çalıştırmadığı için eksen ziyaretçi başına rastgele seçilemez; bu
-yapı aynı görsel etkiyi küçük, kesintisiz bir eksen kaymasıyla verir.
+Animasyon 60 kare ve kare başına 200 ms kullanır. İki uydunun başlangıç tutumu
+ve X/Y/Z dönüş yönleri farklıdır. GitHub profil README dosyaları JavaScript
+çalıştırmadığı için hızlar ziyaretçi başına yeniden rastgele seçilemez; render
+sırasında belirlenir ve bütün döngü boyunca sabit kalır.
