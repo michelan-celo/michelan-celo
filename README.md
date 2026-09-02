@@ -7,5 +7,5 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/celalgunduz/"><strong>COLLABORATE ↗</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://music.youtube.com/watch?v=XyiTiiXSpZs"><strong>♫ Hileli ↗</strong></a>
+  <a href="https://music.youtube.com/watch?v=zbSjDVcZA2o"><strong>♫ Master of Puppets ↗</strong></a>
 </p>
