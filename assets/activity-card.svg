@@ -2207,6 +2207,12 @@
   </g><g>
     <title>0 contributions</title>
     
+    <polygon points="535.50,230.05 543.60,232.05 543.60,230.65 535.50,228.65" fill="#b8c2cc"/>
+    <polygon points="543.60,232.05 548.10,228.45 548.10,227.05 543.60,230.65" fill="#d1d9e0"/>
+    <polygon points="535.50,228.65 543.60,230.65 548.10,227.05 540.00,225.05" fill="#eef2f5" stroke="#c8d0d8" stroke-width="0.55" stroke-linejoin="round"/>
+  </g><g>
+    <title>0 contributions</title>
+    
     <polygon points="520.95,231.85 529.05,233.85 529.05,232.45 520.95,230.45" fill="#b8c2cc"/>
     <polygon points="529.05,233.85 533.55,230.25 533.55,228.85 529.05,232.45" fill="#d1d9e0"/>
     <polygon points="520.95,230.45 529.05,232.45 533.55,228.85 525.45,226.85" fill="#eef2f5" stroke="#c8d0d8" stroke-width="0.55" stroke-linejoin="round"/>
