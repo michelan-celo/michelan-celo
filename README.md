@@ -7,5 +7,5 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/celalgunduz/"><strong>COLLABORATE ↗</strong></a>
   &nbsp;&nbsp;·&nbsp;&nbsp;
-  <a href="https://music.youtube.com/watch?v=Rgrt_8mXrK8"><strong>♫ Get Lucky (Radio Edit) ↗</strong></a>
+  <a href="https://music.youtube.com/watch?v=ZFZM6jDTWd4"><strong>♫ Giorgio by Moroder ↗</strong></a>
 </p>
